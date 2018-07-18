@@ -31,7 +31,9 @@ defmodule API.Mixfile do
       {:cowboy, "~> 1.0"},
       {:absinthe, "~> 1.4"},
       {:absinthe_plug, "~> 1.4"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 2.2"},
+      {:rethinkdb, "~> 0.4.0"},
+      {:distillery, "~> 1.5", runtime: false}
     ]
   end
 end
