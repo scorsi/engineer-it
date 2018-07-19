@@ -1,0 +1,9 @@
+FROM alpine:3.8
+
+RUN apk add --update rethinkdb && rm -rf /var/cache/apk/*
+
+WORKDIR /data
+
+CMD ["rethinkdb", "--bind", "all", "--data", "/data"]
+
+EXPOSE 28015 29015 8080
