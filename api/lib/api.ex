@@ -1,26 +1,23 @@
 defmodule API do
-  def controller do
-    quote do
-      use Phoenix.Controller, namespace: API
-      import Plug.Conn
-      import API.Router.Helpers
-      import API.Gettext
-    end
+  use Application
+
+  def start(_type, _args) do
+    import Supervisor.Spec
+
+    children = [
+      supervisor(API.Endpoint, [])
+      #worker(Mongo, [[name: :mongo, database: "togebuild", pool: DBConnection.Poolboy]])
+    ]
+
+    opts = [strategy: :one_for_one, name: API.Supervisor]
+    Supervisor.start_link(children, opts)
   end
 
-  def view do
-    quote do
-      use Phoenix.View, root: "lib/api/templates",
-                        namespace: API
-
-      import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
-
-      #import API.Router.Helpers
-      import API.ErrorHelpers
-      import API.Gettext
-    end
+  def config_change(changed, _new, removed) do
+    API.Endpoint.config_change(changed, removed)
+    :ok
   end
-
+  
   def router do
     quote do
       use Phoenix.Router
@@ -32,7 +29,6 @@ defmodule API do
   def channel do
     quote do
       use Phoenix.Channel
-      import API.Gettext
     end
   end
 
