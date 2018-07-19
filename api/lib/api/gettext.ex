@@ -1,3 +1,3 @@
 defmodule API.Gettext do
-  use Gettext, otp_app: :engineerit
+  use Gettext, otp_app: :togebuild
 end

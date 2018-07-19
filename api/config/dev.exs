@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :engineerit, API.Endpoint,
+config :togebuild, API.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
