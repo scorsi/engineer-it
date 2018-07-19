@@ -34,8 +34,7 @@ defmodule API.Mixfile do
       {:absinthe_plug, "~> 1.4"},
       {:poison, "~> 2.2"},
       {:mongodb, "~> 0.4.6"},
-      {:poolboy, "~> 1.5"},
-      {:distillery, "~> 1.5", runtime: false}
+      {:poolboy, "~> 1.5"}
     ]
   end
 end
