@@ -6,6 +6,7 @@ defmodule API.Application do
 
     children = [
       supervisor(API.Endpoint, []),
+      worker(Mongo, [[name: :mongo, database: "togebuild", pool: DBConnection.Poolboy]])
     ]
 
     opts = [strategy: :one_for_one, name: API.Supervisor]

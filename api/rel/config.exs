@@ -1,4 +1,3 @@
-
 Path.join(["rel", "plugins", "*.exs"])
 |> Path.wildcard()
 |> Enum.map(&Code.eval_file(&1))
@@ -10,13 +9,13 @@ use Mix.Releases.Config,
 environment :dev do
   set dev_mode: true
   set include_erts: false
-  set cookie: :"7]ylz&7(6ZNVjzlQ((4dGy6|1wu0fYn5]}&y^Uo,*og*3.~@?xR6%evq04%*IqU0"
+  set cookie: :"YJiwFzd}]:JRhtV[WPqSL=Jo<a4)[LM@[f)hhLNIcBNxFPIsEg%.$_A(P.A3BG}C"
 end
 
 environment :prod do
   set include_erts: true
   set include_src: false
-  set cookie: :"Qya&FaCSb>Jjf5ENm||qEMX^<wMeVwfQdE*^BvN<WGM3u?JE@5w;FjVZq|,R)Vgc"
+  set cookie: :"c5MO`!xv!Od99FCghM%$Ni5i2@u:}{WuKQ9QdsPnI7E)DmFbIQ2B&Yp7!@WzZn4?"
 end
 
 release :togebuild do

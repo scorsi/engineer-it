@@ -16,6 +16,7 @@ defmodule API.Mixfile do
   def application do
     [
       mod: {API.Application, []},
+      applications: [:mongodb, :poolboy],
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -32,7 +33,8 @@ defmodule API.Mixfile do
       {:absinthe, "~> 1.4"},
       {:absinthe_plug, "~> 1.4"},
       {:poison, "~> 2.2"},
-      {:rethinkdb, "~> 0.4.0"},
+      {:mongodb, "~> 0.4.6"},
+      {:poolboy, "~> 1.5"},
       {:distillery, "~> 1.5", runtime: false}
     ]
   end
