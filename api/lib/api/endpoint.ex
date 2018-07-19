@@ -19,7 +19,7 @@ defmodule API.Endpoint do
 
   plug Plug.Session,
     store: :cookie,
-    key: "_engineerit_key",
+    key: "_togebuild_key",
     signing_salt: "NHXWlCrW"
 
   plug API.Router

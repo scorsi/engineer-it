@@ -16,7 +16,6 @@ defmodule API.Mixfile do
   def application do
     [
       mod: {API.Application, []},
-      applications: [:mongodb, :poolboy],
       extra_applications: [:logger, :runtime_tools]
     ]
   end

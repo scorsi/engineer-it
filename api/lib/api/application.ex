@@ -5,8 +5,8 @@ defmodule API.Application do
     import Supervisor.Spec
 
     children = [
-      supervisor(API.Endpoint, []),
-      worker(Mongo, [[name: :mongo, database: "togebuild", pool: DBConnection.Poolboy]])
+      supervisor(API.Endpoint, [])
+      #worker(Mongo, [[name: :mongo, database: "togebuild", pool: DBConnection.Poolboy]])
     ]
 
     opts = [strategy: :one_for_one, name: API.Supervisor]
