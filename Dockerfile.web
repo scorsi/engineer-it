@@ -1,8 +1,7 @@
 FROM alpine:3.8
 
 RUN mkdir -p /app && \
-  apk --no-cache add nodejs && \
-  npm install -g ember-cli
+  apk --no-cache add nodejs npm
 
 VOLUME ["/app"]
 
