@@ -1,0 +1,36 @@
+version: "2"
+
+services:
+  db:
+    container_name: togebuild_db
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    volumes:
+      - "./db_data:/bitnami"
+    ports:
+      - "27017:27017"
+  api:
+    container_name: togebuild_api
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    command: "sh -c 'mix deps.get && mix phx.server'"
+    volumes:
+      - "./api:/app"
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+  web:
+    container_name: togebuild_web
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    command: "sh -c 'npm install && npm start'"
+    volumes:
+      - "./web:/app"
+    ports:
+      - "4200:4200"
+    depends_on:
+      - api
