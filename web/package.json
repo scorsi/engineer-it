@@ -1,35 +1,51 @@
 {
-  "name": "web",
-  "version": "0.1.0",
+  "name": "togebuild",
+  "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+  "description": "Small description for togebuild goes here",
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
   },
-  "dependencies": {
-    "buefy": "^0.6.6",
-    "vue": "^2.5.16",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+  "repository": "",
+  "scripts": {
+    "build": "ember build",
+    "lint:js": "eslint .",
+    "start": "ember serve",
+    "test": "ember test"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.0",
-    "@types/mocha": "^5.2.4",
-    "@vue/cli-plugin-babel": "^3.0.0-rc.5",
-    "@vue/cli-plugin-typescript": "^3.0.0-rc.5",
-    "@vue/cli-plugin-unit-mocha": "^3.0.0-rc.5",
-    "@vue/cli-service": "^3.0.0-rc.5",
-    "@vue/test-utils": "^1.0.0-beta.20",
-    "chai": "^4.1.2",
-    "node-sass": "^4.9.2",
-    "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
-    "sass": "^1.10.0",
-    "sass-loader": "^7.0.3",
-    "vue-template-compiler": "^2.5.16"
+    "broccoli-asset-rev": "^2.7.0",
+    "ember-ajax": "^3.0.0",
+    "ember-apollo-client": "^1.0.2",
+    "ember-cli": "~3.3.0",
+    "ember-cli-app-version": "^3.0.0",
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-dependency-checker": "^2.0.0",
+    "ember-cli-eslint": "^4.2.1",
+    "ember-cli-htmlbars": "^2.0.1",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
+    "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-qunit": "^4.3.2",
+    "ember-cli-shims": "^1.2.0",
+    "ember-cli-sri": "^2.1.0",
+    "ember-cli-tachyons-shim": "^4.9.1",
+    "ember-cli-uglify": "^2.0.0",
+    "ember-data": "~3.3.0",
+    "ember-export-application-global": "^2.0.0",
+    "ember-fetch": "^3.4.5",
+    "ember-load-initializers": "^1.1.0",
+    "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-resolver": "^4.0.0",
+    "ember-source": "~3.3.0",
+    "eslint-plugin-ember": "^5.0.0",
+    "loader.js": "^4.2.3",
+    "qunit-dom": "^0.6.2",
+    "tachyons": "^4.9.1"
+  },
+  "engines": {
+    "node": "6.* || 8.* || >= 10.*"
   }
 }
