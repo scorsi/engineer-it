@@ -13,10 +13,11 @@
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint .",
-    "start": "ember serve",
+    "start": "ember serve --watcher=watchman --live-reload=true --live-reload-port=4400",
     "test": "ember test"
   },
   "devDependencies": {
+    "@csstools/postcss-sass": "^2.0.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-apollo-client": "^1.0.2",
@@ -28,6 +29,7 @@
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-postcss": "^4.0.0",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
@@ -42,6 +44,7 @@
     "ember-source": "~3.3.0",
     "eslint-plugin-ember": "^5.0.0",
     "loader.js": "^4.2.3",
+    "postcss-scss": "^2.0.0",
     "qunit-dom": "^0.6.2",
     "tachyons": "^4.9.1"
   },
