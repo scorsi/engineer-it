@@ -1,12 +1,15 @@
 FROM alpine:3.8
 
 RUN mkdir -p /app && \
-  apk --no-cache add nodejs npm
+  apk --no-cache add nodejs npm && \
+  apk --no-cache add watchman --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted && \
+  mkdir -p /var/run/watchman
 
 VOLUME ["/app"]
 
 WORKDIR "/app"
 
 EXPOSE 4200
+EXPOSE 4400
 
 CMD ["node"]

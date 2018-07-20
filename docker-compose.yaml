@@ -32,5 +32,6 @@ services:
       - "./web:/app"
     ports:
       - "4200:4200"
+      - "4400:4400"
     depends_on:
       - api
